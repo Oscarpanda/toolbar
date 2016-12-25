@@ -67,11 +67,11 @@
     position: absolute;
     left: 0; }
   .toolbar-home:before, .toolbar-home:after {
-    -webkit-transition: top 1s;
-    -moz-transition: top 1s;
-    -ms-transition: top 1s;
-    -o-transition: top 1s;
-    transition: top 1s; }
+    -webkit-transition: top 0.5s;
+    -moz-transition: top 0.5s;
+    -ms-transition: top 0.5s;
+    -o-transition: top 0.5s;
+    transition: top 0.5s; }
   .toolbar-home:before {
     content: "\e901";
     opacity: 1;
@@ -115,11 +115,11 @@
   -ms-transform: scaleX(0.01);
   -o-transform: scaleX(0.01);
   transform: scaleX(0.01);
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  -ms-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s; }
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
   .toolbar-list a {
     display: inline-block;
     text-decoration: none; }
