@@ -39,18 +39,18 @@
   content: "\e9b8"; }
 
 .toolbar-dist, .toolbar-home, .toolbar-home:before, .toolbar-home:after, .toolbar-list a {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%; }
 
 .toolbar-dist, .toolbar-home, .toolbar-list {
   background-color: #ABAAAA; }
 
 .toolbar-home:before, .toolbar-home:after, .toolbar-list a {
-  font-size: 20px;
+  font-size: 40px;
   color: #fff;
   text-align: center;
-  line-height: 30px; }
+  line-height: 50px; }
 
 .toolbar {
   position: fixed;
@@ -79,10 +79,10 @@
   .toolbar-home:after {
     content: "\e900";
     opacity: 0.6;
-    top: 30px; }
+    top: 50px; }
 
 .toolbar-dist-click .toolbar-home:before {
-  top: -30px;
+  top: -50px;
   opacity: 0.6; }
 .toolbar-dist-click .toolbar-home:after {
   top: 0;
@@ -98,12 +98,12 @@
 .toolbar-list {
   position: absolute;
   z-index: 9999;
-  right: 15px;
-  width: 120px;
-  height: 30px;
+  right: 25px;
+  width: 200px;
+  height: 50px;
   padding-left: 10px;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
   opacity: 0;
   -webkit-transform-origin: right;
   -moz-transform-origin: right;
