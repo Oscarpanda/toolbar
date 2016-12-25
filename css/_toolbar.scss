@@ -1,4 +1,5 @@
-$toolbar-item-size: 30px;
+$toolbar-item-size: 50px;
+$font-size: 40px;
 .toolbar-dist, .toolbar-home, .toolbar-home:before, .toolbar-home:after, .toolbar-list a {
     width: $toolbar-item-size;
     height: $toolbar-item-size;
@@ -8,7 +9,7 @@ $toolbar-item-size: 30px;
     background-color: #ABAAAA;
 }
 .toolbar-home:before, .toolbar-home:after, .toolbar-list a {
-    font-size: 20px;
+    font-size: $font-size;
     color: #fff;
     text-align: center;
     line-height: $toolbar-item-size;
@@ -64,7 +65,7 @@ $toolbar-item-size: 30px;
     position: absolute;
     z-index: 9999;
     right: $toolbar-item-size / 2;
-    width: $toolbar-item-size * 3 + 30px;
+    width: $toolbar-item-size * 4;
     height: $toolbar-item-size;
     padding-left: 10px;
     border-top-left-radius: $toolbar-item-size / 2;
