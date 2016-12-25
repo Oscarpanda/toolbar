@@ -10,11 +10,12 @@
         <div class="toolbar-dist">
             <div class="toolbar-home"></div>
             <div class="toolbar-list">
-                <a href="javascript:;" class="icon-clipboard"></a>
-                <a href="javascript:;" class="icon-flag"></a>
-                <a href="javascript:;" class="icon-user"></a>
+                <a href="http://baidu.com" class="icon-clipboard"></a>
+                <a href="http://google.com" class="icon-flag"></a>
+                <a href="http://github.com" class="icon-user"></a>
             </div>
         </div>
+        <div class="toolbar-mask" style="display: none;"></div>
     </div>
 
 <script src="zepto.min.js"></script>
@@ -24,15 +25,13 @@
         toolbarList = $(".toolbar-dist");
 
     toolbarHome.on("click", function() {
-        console.log('home')
         if(toolbarDist.hasClass("toolbar-dist-click")) {
             toolbarDist.removeClass("toolbar-dist-click");
+            $(".toolbar-mask").css("display", "none");
         }else{
             toolbarDist.addClass('toolbar-dist-click');
-            $("body").append('<div class="toolbar-mask"></div>');
-            $(".toolbar-mask").off("click").one("click", function() {
-                console.log('mask')
-                $(this).remove();
+            $(".toolbar-mask").css("display", "block").off("click").one("click", function() {
+                $(this).css("display", "none");
                 toolbarDist.removeClass("toolbar-dist-click");
             });
         }
