@@ -3,38 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
-    <title>Document</title>
+    <title>toolbar</title>
+    <!-- 引入 weui样式库 -->
+    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/1.1.0/weui.min.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <div class="toolbar">
-        <div class="toolbar-dist">
-            <div class="toolbar-home"></div>
-            <div class="toolbar-list">
-                <a href="http://baidu.com" class="icon-clipboard"></a>
-                <a href="http://google.com" class="icon-flag"></a>
-                <a href="http://github.com" class="icon-user"></a>
-            </div>
+        <div class="toolbar-list">
+            <a href="http://baidu.com" class="icon-booking"></a>
+            <a href="http://google.com" class="icon-activity"></a>
+            <a href="http://github.com" class="icon-personal"></a>
+            <a href="javascript:;" class="icon-home"></a>
         </div>
-        <div class="toolbar-mask" style="display: none;"></div>
+        <div id="toolbar-mask" class="weui-mask_transparent" style="display: none;"></div>
     </div>
 
 <script src="zepto.min.js"></script>
 <script>
-    var toolbarDist = $(".toolbar-dist"),
-        toolbarHome = $(".toolbar-home"),
-        toolbarList = $(".toolbar-dist");
+    var toolbarHome = $(".icon-home"),
+        toolbarList = $(".toolbar-list"),
+        toolbarMask = $("#toolbar-mask");
 
     toolbarHome.on("click", function() {
-        if(toolbarDist.hasClass("toolbar-dist-click")) {
-            toolbarDist.removeClass("toolbar-dist-click");
-            $(".toolbar-mask").css("display", "none");
-        }else{
-            toolbarDist.addClass('toolbar-dist-click');
-            $(".toolbar-mask").css("display", "block").off("click").one("click", function() {
-                $(this).css("display", "none");
-                toolbarDist.removeClass("toolbar-dist-click");
+        if(!toolbarList.hasClass("toolbar-list-hover")) {
+            toolbarMask.css("display", "block");
+            toolbarList.addClass("toolbar-list-hover");
+            toolbarMask.off("click").one("click", function() {
+                toolbarMask.css("display", "none");
+                toolbarList.removeClass("toolbar-list-hover");
             });
+        }else{
+            toolbarMask.css("display", "none");
+            toolbarList.removeClass("toolbar-list-hover");
         }
     });
 </script>
